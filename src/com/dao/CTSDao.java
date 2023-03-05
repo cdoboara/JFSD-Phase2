@@ -13,8 +13,9 @@ public class CTSDao {
 		Session session = sf.openSession();
 		Transaction tran = session.getTransaction();
 		tran.begin();
+		try {
 		session.save(p1);
-		tran.commit();
+		tran.commit();}catch(Exception e) {return 0;}
 		return 1;
 		
 	}

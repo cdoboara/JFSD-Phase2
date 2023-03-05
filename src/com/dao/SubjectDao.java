@@ -14,8 +14,9 @@ public class SubjectDao {
 		Session session = sf.openSession();
 		Transaction tran = session.getTransaction();
 		tran.begin();
+		try {
 		session.save(subiect);
-		tran.commit();
+		tran.commit();}catch(Exception e) {return 0;}
 		return 1;
 		
 	}

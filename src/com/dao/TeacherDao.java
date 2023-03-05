@@ -13,8 +13,9 @@ public class TeacherDao {
 		Session session = sf.openSession();
 		Transaction tran = session.getTransaction();
 		tran.begin();
+		try {
 		session.save(teach);
-		tran.commit();
+		tran.commit();}catch(Exception e) {return 0;}
 		return 1;
 		
 	}

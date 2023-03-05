@@ -75,7 +75,7 @@ public class ClassController extends HttpServlet {
 		
 		pw.println(result);
 		
-		RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("addClass.jsp");
 		rd.include(request, response);
 		//doGet(request, response);
 	}
